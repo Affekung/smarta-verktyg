@@ -1,21 +1,27 @@
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI-kalkylator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="script.js"></script>
+  <h1>⚖️ BMI-kalkylator</h1>
 
-<h1 >⚖️ BMI-kalkylator</h1> 
+  <label>Längd (cm)</label>
+  <input type="number" id="height" placeholder="Exempel: 180">
 
-<label>Längd (cm)</label>
-  <input type="number" id="height" placeholder="Exempel: 180"> 
+  <label>Vikt (kg)</label>
+  <input type="number" id="weight" placeholder="Exempel: 75">
 
-<label>Vikt (kg)</label> 
-  <input type="number" id="weight" placeholder="Exempel: 75"> 
+  <button onclick="calculateBMI()">Beräkna BMI</button>
 
-<button onclick="calculateBMI()">
-  Beräkna BMI 
-</button> 
-<h2 id="result"></h2>
-
-<br> 
-<a href="kalorier.html">
-  <button> 
-    🔥 Gå till Kalorikalkylatorn 
-  </button> 
-</a>
+  <h2 id="result"></h2>
+  <br>
+  <a href="kalorier.html">
+    <button>🔥 Gå till Kalorikalkylatorn</button>
+  </a>
+</body>
+</html>
