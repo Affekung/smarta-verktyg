@@ -4,42 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kalorikalkylatorn</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 460px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1a1a1a;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 5px;
+      margin-top: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #1a1a1a;
+      background: #fafafa;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus {
+      border-color: #f97316;
+      background: white;
+    }
+
+    button.primary {
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 12px;
+      background: #f97316;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button.primary:hover {
+      background: #ea6c0a;
+    }
+
+    #result {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #7c2d12;
+      display: none;
+      line-height: 1.6;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 1.25rem;
+      color: #f97316;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  
-  <h1>🔥 Kalorikalkylatorn</h1>
-  
-  <label>Kön</label>
-  <select id="gender">
-    <option value="male">Man</option>
-    <option value="female">Kvinna</option>
-  </select>
+  <div class="card">
+    <h1>🔥 Kalorikalkylatorn</h1>
 
-  <label>Ålder</label>
-  <input type="number" id="age" placeholder="Exempel: 25">
+    <label>Kön</label>
+    <select id="gender">
+      <option value="male">Man</option>
+      <option value="female">Kvinna</option>
+    </select>
 
-  <label>Längd (cm)</label>
-  <input type="number" id="height" placeholder="Exempel: 180">
+    <label>Ålder</label>
+    <input type="number" id="age" placeholder="Exempel: 25">
 
-  <label>Vikt (kg)</label>
-  <input type="number" id="weight" placeholder="Exempel: 75">
+    <label>Längd (cm)</label>
+    <input type="number" id="height" placeholder="Exempel: 180">
 
-  <label>Aktivitetsnivå</label>
-  <select id="activity">
-    <option value="1.2">Stillasittande (lite eller ingen träning)</option>
-    <option value="1.375">Lätt aktiv (träning 1–3 dagar/vecka)</option>
-    <option value="1.55">Måttligt aktiv (träning 3–5 dagar/vecka)</option>
-    <option value="1.725">Mycket aktiv (träning 6–7 dagar/vecka)</option>
-    <option value="1.9">Extremt aktiv (hårt arbete + träning)</option>
-  </select>
+    <label>Vikt (kg)</label>
+    <input type="number" id="weight" placeholder="Exempel: 75">
 
-  <button onclick="calculateCalories()">Beräkna kaloribehov</button>
+    <label>Aktivitetsnivå</label>
+    <select id="activity">
+      <option value="1.2">Stillasittande (lite eller ingen träning)</option>
+      <option value="1.375">Lätt aktiv (träning 1–3 dagar/vecka)</option>
+      <option value="1.55">Måttligt aktiv (träning 3–5 dagar/vecka)</option>
+      <option value="1.725">Mycket aktiv (träning 6–7 dagar/vecka)</option>
+      <option value="1.9">Extremt aktiv (hårt arbete + träning)</option>
+    </select>
 
-  <h2 id="result"></h2>
-  <br>
-  <a href="index.html">
-    <button>⚖️ Gå till BMI-kalkylatorn</button>
-  </a>
+    <button class="primary" onclick="calculateCalories()">Beräkna kaloribehov</button>
+
+    <div id="result"></div>
+
+    <a class="back-link" href="index.html">⚖️ Gå till BMI-kalkylatorn</a>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+
