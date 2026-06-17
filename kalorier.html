@@ -1,1 +1,24 @@
-<h1>🔥 Kalorikalkylator</h1> <label>Kön</label> <select id="gender"> <option value="male">Man</option> <option value="female">Kvinna</option> </select> <label>Ålder</label> <input type="number" id="age" placeholder="Exempel: 25"> <label>Längd (cm)</label> <input type="number" id="height" placeholder="Exempel: 180"> <label>Vikt (kg)</label> <input type="number" id="weight" placeholder="Exempel: 75"> <label>Aktivitetsnivå</label> <select id="activity"> <option value="1.2">Stillasittande</option> <option value="1.375">Lätt träning (1–3 dagar/vecka)</option> <option value="1.55">Måttlig träning (3–5 dagar/vecka)</option> <option value="1.725">Hård träning (6–7 dagar/vecka)</option> <option value="1.9">Elitnivå</option> </select> <button onclick="calculateCalories()"> Beräkna kaloribehov </button> <h2 id="result"></h2> <br><br> <a href="index.html">← Till BMI-kalkylatorn</a>
+function calculateCalories() {
+
+let gender = document.getElementById("gender").value;
+let age = parseFloat(document.getElementById("age").value);
+let height = parseFloat(document.getElementById("height").value);
+let weight = parseFloat(document.getElementById("weight").value);
+let activity = parseFloat(document.getElementById("activity").value);
+
+let bmr;
+
+if (gender === "male") {
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+} else {
+    bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+}
+
+let calories = Math.round(bmr * activity);
+
+document.getElementById("result").innerHTML =
+    "Ditt ungefärliga kaloribehov är " +
+    calories +
+    " kalorier per dag.";
+
+}
