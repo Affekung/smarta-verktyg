@@ -51,7 +51,7 @@ input, select {
 }
 
 input:focus, select:focus {
-  border-color: #6366f1;
+  border-color: #f97316;
   background: white;
 }
 
@@ -59,7 +59,7 @@ button.primary {
   width: 100%;
   margin-top: 1.5rem;
   padding: 12px;
-  background: #6366f1;
+  background: #f97316;
   color: white;
   border: none;
   border-radius: 8px;
@@ -70,17 +70,17 @@ button.primary {
 }
 
 button.primary:hover {
-  background: #4f46e5;
+  background: #ea6c0a;
 }
 
 #result {
   margin-top: 1.25rem;
   padding: 1rem 1.25rem;
-  background: #eef2ff;
-  border-left: 4px solid #6366f1;
+  background: #fff7ed;
+  border-left: 4px solid #f97316;
   border-radius: 8px;
   font-size: 15px;
-  color: #3730a3;
+  color: #7c2d12;
   display: none;
   line-height: 1.6;
 }
@@ -89,7 +89,7 @@ button.primary:hover {
   display: block;
   text-align: center;
   margin-top: 1.25rem;
-  color: #6366f1;
+  color: #f97316;
   text-decoration: none;
   font-size: 14px;
 }
